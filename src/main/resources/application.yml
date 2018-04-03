@@ -1,0 +1,22 @@
+server:
+  port: 8082
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 60000
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    auth-server:
+      path: /uaa/**
+      serviceId: auth-service
+      stripPrefix: false
+      sensitiveHeaders:
+debug: true
