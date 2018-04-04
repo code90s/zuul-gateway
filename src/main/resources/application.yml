@@ -1,5 +1,11 @@
+debug: true
 server:
   port: 8082
+spring:
+  security:
+    user:
+      name: user
+      password: admin
 hystrix:
   command:
     default:
@@ -19,4 +25,3 @@ zuul:
       serviceId: auth-service
       stripPrefix: false
       sensitiveHeaders:
-debug: true

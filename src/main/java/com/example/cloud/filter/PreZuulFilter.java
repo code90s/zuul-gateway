@@ -1,4 +1,4 @@
-package com.example.cloud;
+package com.example.cloud.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * <p>ZuulFilter </p>
+ * <p>Pre ZuulFilter</p>
  *
- * @author SunXiaoYuan
+ * @author sxy
  * @date 18-4-3
  * @since 1.0.0
  */
@@ -38,6 +38,7 @@ public class PreZuulFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
 
+        log.info("this is custom pre filter");
         log.info(String.format("=====%s request to %s======", request.getMethod(), request.getRequestURL().toString()));
 
         return null;
