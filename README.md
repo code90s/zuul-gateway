@@ -8,3 +8,9 @@
 
 * [官方Wiki](https://github.com/Netflix/zuul)
 * [Spring Cloud Zuul](https://cloud.spring.io/spring-cloud-netflix/multi/multi__router_and_filter_zuul.html)
+* [Zuul vs Nginx](http://instea.sk/2015/04/netflix-zuul-vs-nginx-performance/)
+
+## 运行
+
+* clone 源码
+* Intellij 导入运行 或者 使用 mvn spring-boot:run 运行
